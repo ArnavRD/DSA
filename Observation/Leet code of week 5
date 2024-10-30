@@ -1,0 +1,8 @@
+int findTheWinner(int numFriends, int k) {
+    int winpos = 0;
+
+    for (int currentFriends = 2; currentFriends <= numFriends; currentFriends++) {
+        winpos = (winpos + k) % currentFriends;
+    }
+    return winpos + 1;
+}
